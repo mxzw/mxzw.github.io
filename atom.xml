@@ -1,15 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mxzw.github.io/</id>
-    <title>Gridea</title>
-    <updated>2020-04-12T13:05:22.709Z</updated>
+    <title>zw</title>
+    <updated>2020-04-13T02:39:29.143Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mxzw.github.io/"/>
     <link rel="self" href="https://mxzw.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://mxzw.github.io/images/avatar.png</logo>
     <icon>https://mxzw.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, zw</rights>
+    <entry>
+        <title type="html"><![CDATA[简学Markdown语法]]></title>
+        <id>https://mxzw.github.io/post/jian-xue-markdown-yu-fa/</id>
+        <link href="https://mxzw.github.io/post/jian-xue-markdown-yu-fa/">
+        </link>
+        <updated>2020-04-12T13:06:39.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-markdown">一、Markdown</h1>
+<p>  Markdown是一种可以使用普遍文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本具有一定的格式。（内嵌html语言）</p>
+<h1 id="二-下载和使用">二、下载和使用</h1>
+<p>  我在这里使用的是一款Markdown编辑器typora，它具有非常简洁的风格，是一个让人一用就爱不释手的软件。下载地址为：<a href="https://www.typora.io/" style="color:red;"> https://www.typora.io/ </a></p>
+<h1 id="三-具体语法">三、具体语法</h1>
+<ol>
+<li>标题</li>
+</ol>
+<ul>
+<li>单独一个&quot;#&quot;表示一级标题，每次多加一个&quot;#&quot;表示多一级标题（最大为6级标题）。<table>
+<tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E6%A0%87%E9%A2%98%E5%B1%95%E7%A4%BA.BMP"/></td>
+</tr>
+</table>
+</li>
+</ul>
+ <!-- ![](https://mxzw.github.io//post-images/标题展示.BMP)-->
+<ul>
+<li>在需要的内容下方加“=”  表示一级标题，同理二阶标题，需在内容下方加“-”。  <table>
+<tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%952.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E6%A0%87%E9%A2%98%E5%B1%95%E7%A4%BA2.BMP"/></td>
+</tr>
+</table>
+</li>
+</ul>
+<ol>
+<li>粗体和斜体</li>
+</ol>
+<ul>
+<li>表示斜体的Markdown语法为：* xx * ，粗体的为：** xx **，粗斜体为： ***  xx  ***<br>
+<font color="red">(注意：*前后不能加空格，否则就不能表示出来)</font>  <table>
+ <tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E7%B2%97%E6%96%9C%E4%BD%93%E8%AF%AD%E6%B3%95.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E7%B2%97%E6%96%9C%E4%BD%93%E5%B1%95%E7%A4%BA.BMP"/></td>
+</tr>
+</table>  
+</li>
+</ul>
+<ol start="3">
+<li>分割线和删除线</li>
+</ol>
+<ul>
+<li>用“***”、“---”、“_ _ _”等均可表示分割线。<br>
+<font color="red">(注意：这里的“---”要注意不能被认为是二级标题，可在其前面或中间加空格)。</font>  <table>
+ <tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E4%B8%8B%E5%88%92%E7%BA%BF%E8%AF%AD%E6%B3%95.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%88%86%E5%89%B2%E7%BA%BF%E5%B1%95%E7%A4%BA.BMP"/></td>
+</tr>
+</table>
+</li>
+<li>用“ ~~ xxx ~~ ”来表示删除线（不能加空格，此处是为了将语法展示出来才加了空格）。  <table>
+ <tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%88%A0%E9%99%A4%E7%BA%BF%E8%AF%AD%E6%B3%95.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%88%A0%E9%99%A4%E7%BA%BF%E5%B1%95%E7%A4%BA.BMP"/></td>
+</tr>
+</table>
+</li>
+</ul>
+<ol start="4">
+<li>链接</li>
+</ol>
+<ul>
+<li>网页链接：  <ul type="circle">
+  <li>【链接名称】(网页链接地址 "链接title") </li>
+  <li><网页链接地址></li>
+  </ul> 
+  <table>
+ <tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5%E5%B1%95%E7%A4%BA.BMP"/></td>
+</tr>
+</table>
+</li>
+<li>图片链接：和网页链接很相似在其前面加上！即可，如：!【图片名称】(图片链接地址 “链接title”)<br>
+针对本地图片而言，可用绝对路径和相对路径来表示图片的链接路径。<br>
+绝对路径：如D:/Gridea/站点源文件/post-images/xxx.BMP，即从根目录下寻找对应图片路径。<br>
+相对路径：如/post-images/xxx.BMP,即从该工作文件夹中寻找相应内容。  <table>
+ <tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E5%B1%95%E7%A4%BA.BMP"/></td>
+</tr>
+</table>
+</li>
+</ul>
+<ol start="5">
+<li>代码块</li>
+</ol>
+<ul>
+<li>‘·xxx ’可表示代码块。</li>
+<li>'''xxx''’也可表示代码块。</li>
+<li>4个空格或两个tab键可表示一个代码区块。<table>
+<tr>
+    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%8C%BA%E5%9D%97%E8%AF%AD%E6%B3%95.BMP"/></td>
+    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%8C%BA%E5%9D%97%E5%B1%95%E7%A4%BA.BMP"/></td>
+</tr>
+</table>
+</li>
+</ul>
+<ol start="6">
+<li>表格</li>
+</ol>
+<ul>
+<li>第一行内容默认字体加粗，第二行为表格对齐方式：即默认左对齐，可设置居中对齐和右对齐。  <table>
+  <tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E8%A1%A8%E6%A0%BC%E8%AF%AD%E6%B3%95.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E8%A1%A8%E6%A0%BC%E5%B1%95%E7%A4%BA.BMP"/></td>
+  </tr>
+  </table>
+</li>
+</ul>
+<ol start="7">
+<li>其余</li>
+</ol>
+<ul>
+<li>^ xxx^ 表示上标（中间不能有空格）。</li>
+<li>~ zzz~ 表示下标（注意和删除线不同，中间不能有空格）。</li>
+<li>无序列表：用“*”、“-”、“+”加空格可表示。</li>
+<li>有序列表：如&quot;1. &quot;,即数字+&quot;.&quot;+空格。</li>
+<li>&amp;emsp；缩进一个中文字符、&amp;ensp；缩进1/2个中文字符、&amp;nbsp；缩进1/4个中文字符。</li>
+<li>在gridea中可用“== 高亮==”来表示高亮，即：<mark>高亮</mark>。  <table>
+  <tr>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%85%B6%E4%BD%99%E8%AF%AD%E6%B3%95.BMP"/></td>
+      <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/%E7%AE%80%E5%AD%A6markdown%E8%AF%AD%E6%B3%95/%E5%85%B6%E4%BD%99%E5%B1%95%E7%A4%BA.BMP"/></td>
+  </tr>
+  </table>
+</li>
+</ul>
+<h1 id="四-解决问题">四、解决问题</h1>
+<p>  对于markdown语法中令人头疼的本地图片上传问题，在查找了一些资料之后，借鉴了知乎上的方法，在GitHub上建立一个专门用来存放图片的仓库，将需要用到的本地图片传入，然后在需要用到的时候，访问该图片，点击download，然后复制网址或鼠标右击复制图片地址即可，然后将网址送入需要调用的地方即可。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://mxzw.github.io/post/hello-gridea/</id>
