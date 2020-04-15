@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mxzw.github.io/</id>
     <title>zw</title>
-    <updated>2020-04-14T09:43:00.980Z</updated>
+    <updated>2020-04-15T11:47:21.596Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mxzw.github.io/"/>
     <link rel="self" href="https://mxzw.github.io/atom.xml"/>
@@ -10,6 +10,79 @@
     <logo>https://mxzw.github.io/images/avatar.png</logo>
     <icon>https://mxzw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, zw</rights>
+    <entry>
+        <title type="html"><![CDATA[HTML学习日记（二）——列表、图片插入、超链接]]></title>
+        <id>https://mxzw.github.io/post/html-xue-xi-ri-ji-er-lie-biao-tu-pian-cha-ru-chao-lian-jie/</id>
+        <link href="https://mxzw.github.io/post/html-xue-xi-ri-ji-er-lie-biao-tu-pian-cha-ru-chao-lian-jie/">
+        </link>
+        <updated>2020-04-15T09:16:46.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-列表">一、列表</h1>
+<ol>
+<li><strong>有序列表</strong><br>
+在HTML中，表示有序列表的标签是＜ol＞＜/ol＞（ordered list），而表示列表项的标签是＜li＞＜/li＞（list）。常用HTML属性为type，可赋值的类型有：1(阿拉伯数字)、A(大写字母)、a(小写字母)、Ⅰ(大写罗马数字)、i(小写罗马数字)。 <table>
+         <tr>
+                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95.BMP" /></td>
+                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA.BMP" /></td>
+         </tr>
+ </table>
+</li>
+<li><strong>无序列表</strong><br>
+表示无序列表的HTML标签是＜ul＞＜/ul＞（unordered list），表示列表项的HTML标签依旧是＜li＞＜/li＞（list）。常用的HTML属性为type，可赋值类型有:circle(空圆)、square(正方形)、disc(实圆)。 <table>
+         <tr>
+                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95.BMP" /></td>
+                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA.BMP" /></td>
+         </tr>
+ </table>
+</li>
+<li><strong>无序列表和有序列表的嵌套</strong><br>
+两种列表的嵌套实际上就是在要嵌套的列表的列表项中，将里面的内容替换为另一种列表而已，类似于换元法。 <table>
+         <tr>
+                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97%E8%AF%AD%E6%B3%95.BMP" /></td>
+                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97%E5%B1%95%E7%A4%BA.BMP" /></td>
+         </tr>
+ </table>
+</li>
+</ol>
+<h1 id="二-图片的插入">二、图片的插入</h1>
+<p>＜img /＞标签表示向网页中插入图片，需要注意的是从技术上来说，＜img /＞标签并不会在网页中插入图像，而是从网页上链接图像，＜ing /＞标签创建的是被引用图像的占位空间。<br>
+＜img /＞标签有两个必须的HTML属性：src属性和alt属性。</p>
+<ul>
+<li>src属性：用来规定显示图像的链接（或是图片的路径），通常为src=“xxx”，xxx为图片所在的链接（路径）。</li>
+<li>alt属性：用来规定图像的替代文本，简单来说就是图片加载异常时的提示语，通常为alt=“xxx”，xxx为所要提示的内容。</li>
+</ul>
+<p>＜img /＞标签除了以上两个必选打的属性外，其他常用的可选的属性：</p>
+<ul>
+<li>
+<p>align：规定如何根据周围文本来跑排列图像。</p>
+</li>
+<li>
+<p>height：定义图像的高度。</p>
+</li>
+<li>
+<p>width：设置图像的宽度。</p>
+</li>
+<li>
+<p>title：设置图片的标题。</p>
+<table>
+        <tr>
+                <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E8%AF%AD%E6%B3%95.BMP" /></td>
+                <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E5%B1%95%E7%A4%BA.BMP" /></td>
+        </tr>
+</table>
+</li>
+</ul>
+<h1 id="三-超链接">三、超链接</h1>
+<p>用＜a＞标签来表示超链接。（anchor）<br>
+＜a＞标签中最重要的属性示href属性，它和插入图片标签＜img /＞中的src属性一样，它指示链接的目标网址。常用的HTML属性为：target，可赋值的类型有：_self（在本身页面跳转）、_blank（在新页面跳转）。</p>
+  <table>
+            <tr>
+                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95.BMP" /></td>
+                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E5%B1%95%E7%A4%BA.BMP" /></td>
+                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E5%B1%95%E7%A4%BA2.BMP" /></td>
+            </tr>
+    </table>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[HTML学习日记（一）——文字的基本格式]]></title>
         <id>https://mxzw.github.io/post/html-xue-xi-ri-ji-yi-wen-zi-de-ji-ben-ge-shi/</id>
