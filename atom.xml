@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mxzw.github.io/</id>
     <title>zw</title>
-    <updated>2020-04-22T11:14:22.558Z</updated>
+    <updated>2020-05-14T10:42:32.533Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mxzw.github.io/"/>
     <link rel="self" href="https://mxzw.github.io/atom.xml"/>
@@ -132,6 +132,7 @@
     cout&lt;&lt;“and A”&lt;&lt;s[i][j]+1&lt;&lt;“,”&lt;&lt;j&lt;&lt;endl; 
 }
 </code></pre>
+<p>本文大多内容均来自于<a href="https://www.icourse163.org/learn/XMU-1205800806?tid=1450170449#/learn/announce">中国大学MOOC_算法设计与分析_厦门大学_曾华琳</a>课程课件。</p>
 </li>
 </ol>
 ]]></content>

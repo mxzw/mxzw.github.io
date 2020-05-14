@@ -7,7 +7,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
-<title>HTML学习日记（二）——列表、图片插入、超链接 | zw</title>
+<title>算法设计——动态规划（二） | zw</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1589452936982">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
@@ -27,8 +27,8 @@
 
 
 
-    <meta name="description" content="HTML学习日记（二）——列表、图片插入、超链接" />
-    <meta name="keywords" content="HTML,study" />
+    <meta name="description" content="算法设计——动态规划（二）" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -218,9 +218,12 @@
               <div class="toc-box right-motion">
   <div class="toc-wrapper auto-number auto" id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E4%B8%80-%E5%88%97%E8%A1%A8">一、列表</a></li>
-<li><a href="#%E4%BA%8C-%E5%9B%BE%E7%89%87%E7%9A%84%E6%8F%92%E5%85%A5">二、图片的插入</a></li>
-<li><a href="#%E4%B8%89-%E8%B6%85%E9%93%BE%E6%8E%A5">三、超链接</a></li>
+<li><a href="#%E4%B8%80-%E6%9C%80%E4%BC%98%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91">一、最优二叉查找树</a><br>
+*
+<ul>
+<li><a href="#%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91"><strong>二叉查找树</strong></a></li>
+</ul>
+</li>
 </ul>
 
   </div>
@@ -485,8 +488,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-er-lie-biao-tu-pian-cha-ru-chao-lian-jie/">
-      HTML学习日记（二）——列表、图片插入、超链接
+    <a class="post-title-link" href="https://mxzw.github.io/post/suan-fa-she-ji-dong-tai-gui-hua-er/">
+      算法设计——动态规划（二）
     </a>
   </h1>
   <div class="post-meta">
@@ -494,44 +497,25 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-04-15</span>
+      <span>2020-04-22</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://mxzw.github.io/tag/IW5rbylne/">
-              <span>HTML</span>
-            </a>、
-          
-        
-          
-            <a href="https://mxzw.github.io/tag/FWFBsN6Co/">
-              <span>study</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>3分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>518<span class="pc-show">字数</span></span>
+      <span>535<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/html-xue-xi-ri-ji-er-lie-biao-tu-pian-cha-ru-chao-lian-jie/" data-flag-title="HTML学习日记（二）——列表、图片插入、超链接" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/suan-fa-she-ji-dong-tai-gui-hua-er/" data-flag-title="算法设计——动态规划（二）" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -540,71 +524,27 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <h1 id="一-列表">一、列表</h1>
-<ol>
-<li><strong>有序列表</strong><br>
-在HTML中，表示有序列表的标签是＜ol＞＜/ol＞（ordered list），而表示列表项的标签是＜li＞＜/li＞（list）。常用HTML属性为type，可赋值的类型有：1(阿拉伯数字)、A(大写字母)、a(小写字母)、Ⅰ(大写罗马数字)、i(小写罗马数字)。 <table>
-         <tr>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95.BMP" /></td>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA.BMP" /></td>
-         </tr>
- </table>
-</li>
-<li><strong>无序列表</strong><br>
-表示无序列表的HTML标签是＜ul＞＜/ul＞（unordered list），表示列表项的HTML标签依旧是＜li＞＜/li＞（list）。常用的HTML属性为type，可赋值类型有:circle(空圆)、square(正方形)、disc(实圆)。 <table>
-         <tr>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95.BMP" /></td>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA.BMP" /></td>
-         </tr>
- </table>
-</li>
-<li><strong>无序列表和有序列表的嵌套</strong><br>
-两种列表的嵌套实际上就是在要嵌套的列表的列表项中，将里面的内容替换为另一种列表而已，类似于换元法。 <table>
-         <tr>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97%E8%AF%AD%E6%B3%95.BMP" /></td>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97%E5%B1%95%E7%A4%BA.BMP" /></td>
-         </tr>
- </table>
-</li>
-</ol>
-<h1 id="二-图片的插入">二、图片的插入</h1>
-<p>＜img /＞标签表示向网页中插入图片，需要注意的是从技术上来说，＜img /＞标签并不会在网页中插入图像，而是从网页上链接图像，＜ing /＞标签创建的是被引用图像的占位空间。<br>
-＜img /＞标签有两个必须的HTML属性：src属性和alt属性。</p>
+                <h1 id="一-最优二叉查找树">一、最优二叉查找树</h1>
+<h3 id="二叉查找树"><strong>二叉查找树</strong></h3>
 <ul>
-<li>src属性：用来规定显示图像的链接（或是图片的路径），通常为src=“xxx”，xxx为图片所在的链接（路径）。</li>
-<li>alt属性：用来规定图像的替代文本，简单来说就是图片加载异常时的提示语，通常为alt=“xxx”，xxx为所要提示的内容。</li>
+<li>若左子树不空，则左子树上所有节点的值均小于它的根结点的值</li>
+<li>若右子树不空，则右子树上所有节点的值均大于它的根节点的值</li>
+<li>左、右子树也分别为二叉查找树</li>
 </ul>
-<p>＜img /＞标签除了以上两个必选打的属性外，其他常用的可选的属性：</p>
+<p>设{r<sub>1</sub>, r<sub>2</sub>, …, r<sub>n</sub>}是n个记录的集合，其查找概率分别是 {p<sub>1</sub>, p<sub>2</sub>, …, p<sub>n</sub>}，<strong>最优二叉查找树</strong>是以这n个记录构成的二叉 查找树中具有最少平均比较次数的二叉查找树，即<br>
+<img src="https://mxzw.github.io//post-images/1587554988324.BMP" alt="" loading="lazy"><br>
+最小，其中p<sub>i</sub>是记录r<sub>i</sub>的查找概率，c<sub>i</sub>是在二叉查找树中查找r<sub>i</sub>的比较次数。</p>
+<p>设T(i, j)是由记录{ri, …, rj}(1≤i≤j≤n)构成的二叉查找树，C(i, j) 是这棵 二叉查找树的平均比较次数。虽然最后的结果是C(1, n)，但遵循动态规划 法的求解方法，需要求出所有较小子问题 C(i, j) 的值。考虑从{ri, …, rj}中 选择一个记录rk作为二叉查找树的根结点，可以得到如下关系：<br>
+<img src="https://mxzw.github.io//post-images/1587555929166.BMP" alt="" loading="lazy"><br>
+因此，得到如下动态规划函数：<br>
+<img src="https://mxzw.github.io//post-images/1587556015348.BMP" alt="" loading="lazy"><br>
+其中，C(i,i-1)=0的设立，是放止出现越界之类的漏洞，起到像防火墙一样的作用。</p>
 <ul>
-<li>
-<p>align：规定如何根据周围文本来跑排列图像。</p>
-</li>
-<li>
-<p>height：定义图像的高度。</p>
-</li>
-<li>
-<p>width：设置图像的宽度。</p>
-</li>
-<li>
-<p>title：设置图片的标题。</p>
-<table>
-        <tr>
-                <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E8%AF%AD%E6%B3%95.BMP" /></td>
-                <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E5%B1%95%E7%A4%BA.BMP" /></td>
-        </tr>
-</table>
-</li>
+<li>建立一个二维表C[n+1][n+1],其中C[i][j]表示二叉查找树T(i,j)的平均比较次数。</li>
+<li>当k=1时，求C[i][j]需要用到C[i][0],当k=n时，求C[i][j]需要用到C[n+1][j],所以，二维表C[n+1][n+1]行下标的范围为1～n+1，列下标的范围为0～n。</li>
+<li>为了在求出由{r<sub>1</sub>，r<sub>2</sub>,...,r<sub>n</sub>}构成的二叉查找树的平均比较次数的同时得到最优二叉查找树，设一个二维表r[n+1][n+1],其下标范围与二维表C相同，r[i][j]表示二叉查找树T(i,j)的根结点的序号。<br>
+本文大多内容均来自于<a href="https://www.icourse163.org/learn/XMU-1205800806?tid=1450170449#/learn/announce">中国大学MOOC_算法设计与分析_厦门大学_曾华琳</a>课程课件。</li>
 </ul>
-<h1 id="三-超链接">三、超链接</h1>
-<p>用＜a＞标签来表示超链接。（anchor）<br>
-＜a＞标签中最重要的属性示href属性，它和插入图片标签＜img /＞中的src属性一样，它指示链接的目标网址。常用的HTML属性为：target，可赋值的类型有：_self（在本身页面跳转）、_blank（在新页面跳转）。</p>
-  <table>
-            <tr>
-                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95.BMP" /></td>
-                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E5%B1%95%E7%A4%BA.BMP" /></td>
-                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E5%B1%95%E7%A4%BA2.BMP" /></td>
-            </tr>
-    </table>
 
               </div>
               <div class="post-footer">
@@ -615,7 +555,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://mxzw.github.io/post/html-xue-xi-ri-ji-er-lie-biao-tu-pian-cha-ru-chao-lian-jie/" title="HTML学习日记（二）——列表、图片插入、超链接">HTML学习日记（二）——列表、图片插入、超链接</a>
+      <a href="https://mxzw.github.io/post/suan-fa-she-ji-dong-tai-gui-hua-er/" title="算法设计——动态规划（二）">算法设计——动态规划（二）</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -624,24 +564,12 @@ window.addEventListener('load', function() {
   </ul>
   <div class="tags">
     
-      <a href="https://mxzw.github.io/tag/IW5rbylne/"># HTML</a>
-    
-      <a href="https://mxzw.github.io/tag/FWFBsN6Co/"># study</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="HTML学习日记（三）——表格、表单" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-san-biao-ge-biao-dan/">HTML学习日记（三）——表格、表单</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="HTML学习日记（三）——表格、表单" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-san-biao-ge-biao-dan/">上一篇</a>
-      
     </div>
     <div class="nav-next">
-      
-        <a class="nav-pc-next" title="HTML学习日记（一）——文字的基本格式" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-yi-wen-zi-de-ji-ben-ge-shi/">HTML学习日记（一）——文字的基本格式</a>
-        <a class="nav-mobile-next" title="HTML学习日记（一）——文字的基本格式" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-yi-wen-zi-de-ji-ben-ge-shi/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
