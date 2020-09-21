@@ -7,7 +7,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="你只管努力，剩下的交给未来">
 <meta name="theme-color" content="#000">
-<title>HTML学习日记（五）——div | zw</title>
+<title>LeetCode-初级算法-数组-1：删除排序数组的重复项 | zw</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1600674006509">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
@@ -27,8 +27,8 @@
 
 
 
-    <meta name="description" content="HTML学习日记（五）——div" />
-    <meta name="keywords" content="HTML" />
+    <meta name="description" content="LeetCode-初级算法-数组-1：删除排序数组的重复项" />
+    <meta name="keywords" content="LeetCode" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -218,12 +218,15 @@
               <div class="toc-box right-motion">
   <div class="toc-wrapper auto-number auto" id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E4%B8%80-div%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E7%94%A8%E6%B3%95">一、div的定义和用法</a></li>
-<li><a href="#%E4%BA%8C-div%E7%9A%84%E7%BB%83%E4%B9%A0">二、div的练习</a><br>
-*
+<li><a href="#%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9">删除排序数组中的重复项</a>
 <ul>
-<li><a href="#%E7%BB%83%E4%B9%A0%E4%B8%80"><strong>练习（一）</strong></a></li>
-<li><a href="#%E7%BB%83%E4%B9%A0%E4%BA%8C"><strong>练习（二）</strong></a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B1"><strong>示例1：</strong></a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B2"><strong>示例2：</strong></a></li>
+<li><a href="#%E8%AF%B4%E6%98%8E"><strong>说明：</strong></a>
+<ul>
+<li><a href="#%E4%B8%8B%E9%9D%A2%E6%98%AF%E4%BB%A3%E7%A0%81">下面是代码</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -490,8 +493,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-wu-div/">
-      HTML学习日记（五）——div
+    <a class="post-title-link" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/">
+      LeetCode-初级算法-数组-1：删除排序数组的重复项
     </a>
   </h1>
   <div class="post-meta">
@@ -499,7 +502,7 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-04-19</span>
+      <span>2020-09-21</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -508,8 +511,8 @@ window.addEventListener('load', function() {
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://mxzw.github.io/tag/IW5rbylne/">
-              <span>HTML</span>
+            <a href="https://mxzw.github.io/tag/cSiGkidVw/">
+              <span>LeetCode</span>
             </a>
           
         
@@ -523,14 +526,14 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>722<span class="pc-show">字数</span></span>
+      <span>1030<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/html-xue-xi-ri-ji-wu-div/" data-flag-title="HTML学习日记（五）——div" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/" data-flag-title="LeetCode-初级算法-数组-1：删除排序数组的重复项" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -539,120 +542,59 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <h1 id="一-div的定义和用法">一、div的定义和用法</h1>
-<p>＜div＞可定义文档中的分区或节。＜div＞标签可以把文档分为独立的、不同的部分。如果用id和class来标记＜div＞，那么该标签的作用会变得更加有效。<br>
-＜div＞是一个块级元素，它的内容会自动换行，即浏览器通常会在＜div＞标签前后放置一个换行符；实际上，换行是＜div＞固有的唯一格式表现，可以通过＜div＞的class或id应用额外的样式。<br>
-应用class或id作为＜div＞的属性，一般class用于元素组（或是说某一类元素），而id用于标识唯一的元素。</p>
-<h1 id="二-div的练习">二、div的练习</h1>
-<h3 id="练习一"><strong>练习（一）</strong></h3>
-<p>代码如下：<br>
-①HTML文档代码：</p>
-<pre><code>   &lt;!DOCTYPE html&gt;
-   &lt;html&gt;
-   &lt;head&gt;
-   	&lt;meta charset=&quot;UTF-8&quot;&gt;
-   	&lt;title&gt;div的练习&lt;/title&gt;
-   	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;zw-11div练习1.css&quot;/&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-   	&lt;div id=&quot;first&quot;&gt;
-   		first
-   	&lt;/div&gt;
-   	&lt;div id=&quot;second&quot;&gt;
-   		second
-   	&lt;/div&gt;
-   &lt;/body&gt;
-&lt;/html&gt;
+                <p>今天开始刷LeetCode中的面试类型题</p>
+<h1 id="删除排序数组中的重复项">删除排序数组中的重复项</h1>
+<p>给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。<br>
+不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
+<h2 id="示例1"><strong>示例1：</strong></h2>
+<pre><code>给定数组 nums = [1,1,2], 
+
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
+
+你不需要考虑数组中超出新长度后面的元素。
 </code></pre>
-<p>②CSS文档代码：</p>
-<pre><code>
-*{
-	margin: 0px;  /*代表外边距为0 */
-	padding: 0px;   /*代表内边距为0*/
-}
-/*  * 是通配选择器，设置网页的默认值  */
+<h2 id="示例2"><strong>示例2：</strong></h2>
+<pre><code>给定 nums = [0,0,1,1,1,2,2,3,3,4],
 
-#first{
-	position: absolute;   /*指默认位置为绝对路径*/
-	background-color: red;
-	width: 200px;
-	height: 200px;
-	left: 30px;
-	top: 50px;
-	z-index: 2;
-}
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
 
-#second{
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	background-color: green;
-	left: 60px;
-	top: 100px;
-	z-index: 1;
-	/*z-index 表示图层的先后   大的在前，小的在后*/
+你不需要考虑数组中超出新长度后面的元素。
+</code></pre>
+<h2 id="说明"><strong>说明：</strong></h2>
+<p>为什么返回数值是整数，但输出的答案是数组呢?<br>
+请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。<br>
+你可以想象内部操作如下:</p>
+<pre><code>// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);
+
+// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+for (int i = 0; i &lt; len; i++) {
+    print(nums[i]);
 }
 </code></pre>
-<p>其中CSS文档中，用“*”来表示通配选择器，一般用来设置网页的默认值。（通常都是初始化网页的内外边距），一般用div来进行分层，用z-index来表示div图层的先后。<br>
-实际效果如下：<br>
-<img src="https://mxzw.github.io//post-images/1587345135137.BMP" alt="" loading="lazy"></p>
-<h3 id="练习二"><strong>练习（二）</strong></h3>
-<p>代码如下：<br>
-①HTML文档代码：</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&quot;UTF-8&quot;&gt;
-		&lt;title&gt;div的练习&lt;/title&gt;
-		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;zw-12div的练习2.css&quot;/&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;div id=&quot;one&quot;&gt;
-			
-		&lt;/div&gt;
-		&lt;div id=&quot;two&quot;&gt;
-			today you are very cool!!! 
-		&lt;/div&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
+<pre><code>作者：力扣 (LeetCode)
+链接：https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/x2gy9m/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 </code></pre>
-<p>②CSS文档代码：</p>
-<pre><code>
-*{
-	margin: 0px;
-	padding: 0px;
+<p>我的艰难解题之路：题目要求是返回删除重复数组元素后的长度，并在运行中不能开辟新的数组空间以及要在“原地”修改删除数组的元素，还要求了空间复杂度为O(1)，由于我对空间复杂度的概念理解的并不是很透彻，因此看到这个O(1)我就认为这个题只能用一个for循环来做，二个for循环是不符合题意的(实际上是可以的)，因此我就用了好几个小时来想如何用一个for循环解这个题，当时我认为采用双指针必须要用两个for循环来表示，这是思维定势了，平常见到的算法大多都是用双循环来表示双指针的，如果我当时反映过来可以用双循环来解题，那这个题就很so easy了，不会花我好几个小时来解这个题了。由于思维的定势，我想了好久挣扎出来的代码一运行是错误的，然后我心态就崩了(本来想着不看网上答案的，但我忍不住了)，我就上网看了看官方题解是怎么写的，然后我心态血崩，这么简单的思路我想了好久，还没想出来，顿时心情就一落千丈，唉，说多了就是泪，我来说说人家官方题解的思路吧；<font color = "red">还是采用双指针，但是只用了一个for循环，，在for循环的外面定义一个指针，让他指向数组的开头a[0]，然后在for循环里面用它定义的变量做指针，开始指向数组的第二个元素a[1]，然后用if语句进行判断，如果a[i]!=a[j];则i++并且a[i]=a[j];然后直到循环结束，返回i+1。</font>看完之后，我只想说：妙啊！！，我怎么就想不到呢，想想自己花了那么多时间都没想出来的题，以为有多难呢，结果被如此轻易的做出来。。。唉，心情复杂！</p>
+<h3 id="下面是代码">下面是代码</h3>
+<pre><code>    class Solution {
+    public int removeDuplicates(int[] nums) {
+        if(nums.length == 0) 
+            return 0;
+        int i = 0;
+		for (int j = 1; j &lt; nums.length; j++) {
+			if(nums[j]!= nums[i]) {
+				i++;
+				nums[i]=nums[j];
+			}
+		}
+		return i+1;
+    }
 }
-
-#one{
-	background-color: red;
-	width: 300px;
-	height: 300px;
-	margin-top: 30px; /*距离上外边距30px*/
-	margin-left: 30px;/*距离左外边距30px*/
-	/*无position表示默认位置为相对位置*/
-	float: left;  /*one中内容向左漂浮*/
-}
-
-#two{
-	background-color: green;
-	width: 500px;
-	height: 300px;
-	margin-top: 40px;
-	margin-left: 50px;
-	font-size: 30px; /*字体大小*/
-	color: red;/*字体颜色*/
-	padding-left: 50px;  /*字体距离图层  左内边距50px*/
-	padding-top: 50px; /*/*字体距离图层  上内边距50px*/
-	box-sizing: border-box; /*使边框不随着 padding属性的改变而改变，
-								固定边框的大小*/
-	float: left;
-}
-
-/*块级元素 会直接占据网页的一行 当位置相对时，
- * 另一个块级元素会在上一个块级元素的下面 而不是左右*/ 
 </code></pre>
-<p>实际效果如下：<br>
-<img src="https://mxzw.github.io//post-images/1587345446454.BMP" alt="" loading="lazy"></p>
 
               </div>
               <div class="post-footer">
@@ -663,7 +605,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://mxzw.github.io/post/html-xue-xi-ri-ji-wu-div/" title="HTML学习日记（五）——div">HTML学习日记（五）——div</a>
+      <a href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/" title="LeetCode-初级算法-数组-1：删除排序数组的重复项">LeetCode-初级算法-数组-1：删除排序数组的重复项</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -672,21 +614,17 @@ window.addEventListener('load', function() {
   </ul>
   <div class="tags">
     
-      <a href="https://mxzw.github.io/tag/IW5rbylne/"># HTML</a>
+      <a href="https://mxzw.github.io/tag/cSiGkidVw/"># LeetCode</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="算法设计——动态规划（一）" href="https://mxzw.github.io/post/suan-fa-she-ji-dong-tai-gui-hua-yi/">算法设计——动态规划（一）</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="算法设计——动态规划（一）" href="https://mxzw.github.io/post/suan-fa-she-ji-dong-tai-gui-hua-yi/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="HTML学习日记（四）——css、超链接状态" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-si-csschao-lian-jie-zhuang-tai-div/">HTML学习日记（四）——css、超链接状态</a>
-        <a class="nav-mobile-next" title="HTML学习日记（四）——css、超链接状态" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-si-csschao-lian-jie-zhuang-tai-div/">下一篇</a>
+        <a class="nav-pc-next" title="JavaScript——脚本基础" href="https://mxzw.github.io/post/javascript-jiao-ben-ji-chu/">JavaScript——脚本基础</a>
+        <a class="nav-mobile-next" title="JavaScript——脚本基础" href="https://mxzw.github.io/post/javascript-jiao-ben-ji-chu/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

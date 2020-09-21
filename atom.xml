@@ -2,14 +2,182 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mxzw.github.io/</id>
     <title>zw</title>
-    <updated>2020-05-14T10:42:32.533Z</updated>
+    <updated>2020-09-21T07:40:09.392Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mxzw.github.io/"/>
     <link rel="self" href="https://mxzw.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>你只管努力，剩下的交给未来</subtitle>
     <logo>https://mxzw.github.io/images/avatar.png</logo>
     <icon>https://mxzw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, zw</rights>
+    <entry>
+        <title type="html"><![CDATA[LeetCode-初级算法-数组-1：删除排序数组的重复项]]></title>
+        <id>https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/</id>
+        <link href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/">
+        </link>
+        <updated>2020-09-21T06:46:15.000Z</updated>
+        <content type="html"><![CDATA[<p>今天开始刷LeetCode中的面试类型题</p>
+<h1 id="删除排序数组中的重复项">删除排序数组中的重复项</h1>
+<p>给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。<br>
+不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
+<h2 id="示例1"><strong>示例1：</strong></h2>
+<pre><code>给定数组 nums = [1,1,2], 
+
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
+
+你不需要考虑数组中超出新长度后面的元素。
+</code></pre>
+<h2 id="示例2"><strong>示例2：</strong></h2>
+<pre><code>给定 nums = [0,0,1,1,1,2,2,3,3,4],
+
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
+
+你不需要考虑数组中超出新长度后面的元素。
+</code></pre>
+<h2 id="说明"><strong>说明：</strong></h2>
+<p>为什么返回数值是整数，但输出的答案是数组呢?<br>
+请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。<br>
+你可以想象内部操作如下:</p>
+<pre><code>// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);
+
+// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+for (int i = 0; i &lt; len; i++) {
+    print(nums[i]);
+}
+</code></pre>
+<pre><code>作者：力扣 (LeetCode)
+链接：https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/x2gy9m/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</code></pre>
+<p>我的艰难解题之路：题目要求是返回删除重复数组元素后的长度，并在运行中不能开辟新的数组空间以及要在“原地”修改删除数组的元素，还要求了空间复杂度为O(1)，由于我对空间复杂度的概念理解的并不是很透彻，因此看到这个O(1)我就认为这个题只能用一个for循环来做，二个for循环是不符合题意的(实际上是可以的)，因此我就用了好几个小时来想如何用一个for循环解这个题，当时我认为采用双指针必须要用两个for循环来表示，这是思维定势了，平常见到的算法大多都是用双循环来表示双指针的，如果我当时反映过来可以用双循环来解题，那这个题就很so easy了，不会花我好几个小时来解这个题了。由于思维的定势，我想了好久挣扎出来的代码一运行是错误的，然后我心态就崩了(本来想着不看网上答案的，但我忍不住了)，我就上网看了看官方题解是怎么写的，然后我心态血崩，这么简单的思路我想了好久，还没想出来，顿时心情就一落千丈，唉，说多了就是泪，我来说说人家官方题解的思路吧；<font color = "red">还是采用双指针，但是只用了一个for循环，，在for循环的外面定义一个指针，让他指向数组的开头a[0]，然后在for循环里面用它定义的变量做指针，开始指向数组的第二个元素a[1]，然后用if语句进行判断，如果a[i]!=a[j];则i++并且a[i]=a[j];然后直到循环结束，返回i+1。</font>看完之后，我只想说：妙啊！！，我怎么就想不到呢，想想自己花了那么多时间都没想出来的题，以为有多难呢，结果被如此轻易的做出来。。。唉，心情复杂！</p>
+<h3 id="下面是代码">下面是代码</h3>
+<pre><code>    class Solution {
+    public int removeDuplicates(int[] nums) {
+        if(nums.length == 0) 
+            return 0;
+        int i = 0;
+		for (int j = 1; j &lt; nums.length; j++) {
+			if(nums[j]!= nums[i]) {
+				i++;
+				nums[i]=nums[j];
+			}
+		}
+		return i+1;
+    }
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript——脚本基础]]></title>
+        <id>https://mxzw.github.io/post/javascript-jiao-ben-ji-chu/</id>
+        <link href="https://mxzw.github.io/post/javascript-jiao-ben-ji-chu/">
+        </link>
+        <updated>2020-05-14T10:42:37.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="javascript概述">JavaScript概述</h1>
+<ul>
+<li>是一种脚本语言，在程序运行中逐行解释（就是逐行运行），而不需要实现编译。</li>
+<li>基于对象，能够使用存在的程序对象，但它无法像Java一样完全面向对象。</li>
+<li>能够跨平台，JavaScript主要是通过浏览器进行解释执行，和操作系统不发生直接关系，能够运行浏览器软件的地方就可以运行JavaScript。</li>
+<li>通过浏览器执行，根据浏览器不同执行可能会有差异 。</li>
+</ul>
+<h2 id="第一个javascript程序"><strong>第一个JavaScript程序</strong></h2>
+<p>直接新建.html文件，然后写下以下代码：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    document.write(&quot;我的第一个JavaScript程序&quot;);
+&lt;/script&gt;
+</code></pre>
+<p>运行效果如图所示：<br>
+<img src="https://mxzw.github.io//post-images/1589453815412.PNG" alt="效果展示" loading="lazy"></p>
+<h2 id="编写javascript语言的软件"><strong>编写JavaScript语言的软件</strong></h2>
+<ul>
+<li>记事本</li>
+<li>Dreamweaver</li>
+<li>Hbuilder</li>
+<li>WebStorm</li>
+<li>Sublime</li>
+</ul>
+<h3 id="入门案例">入门案例：</h3>
+<pre><code> &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot; /&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;script type=&quot;text/javascript&quot;&gt;
+			document.write(&quot;&lt;h1&gt;你要一个人悄悄的努力，然后惊艳所有人!&lt;/h1&gt;&lt;br /&gt;&quot;);
+			/*document.write(&quot;&quot;)在当前文件中输出双引号中的内容*/
+			var count=0;/*var表示定义一个变量 （variable）*/
+			for (var i=0;i&lt;5;i++) {
+				document.write(&quot;&lt;b&gt;你一定要加油！！&lt;/b&gt;&lt;br /&gt;&quot;);
+			}
+		&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Fighting ! ! !&lt;/h1&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>实际效果如下：<br>
+<img src="https://mxzw.github.io//post-images/1589456154092.PNG" alt="效果展示" loading="lazy"></p>
+<ul>
+<li>var表示定义一个变量 （variable）</li>
+<li>document.write(&quot;xxxx&quot;)表示在当前文件中输出双引号中的内容</li>
+</ul>
+<h3 id="使用变量"><strong>使用变量</strong></h3>
+<ul>
+<li>JavaScript是采用<strong>弱数据类型</strong>的语言，意味着<strong>声明变量时不需要指定变量的数据类型</strong>，数据在被赋给变量的时候会自动确定数据类型。</li>
+<li>在JavaScript中的声明一个变量的语法如下：<br>
+var 变量名;</li>
+<li>也可以用一条语句声明多个变量：<br>
+var 变量名1,变量名2,变量名N;</li>
+<li>以下代码是合法的变量声明：<br>
+var a1; 或者 var a1 = 10;<br>
+var a2,a3; 或者 var a2,a3 = 10;</li>
+<li>变量的命名和C语言一样，都是以字母或下划线开头（不能以数字开头），并且区分大小写</li>
+<li>例如：</li>
+</ul>
+<pre><code>    &lt;script&gt;
+        var A=&quot;Uppercase  A&quot;;
+	     var a=&quot;Lowercase  a&quot;;
+         var x=0;
+         x = x +10;
+         document.write(x);
+		document.write(A);
+		document.write(&quot;&lt;br&gt;&quot;);
+		document.write(a);
+     &lt;/script&gt;
+</code></pre>
+<p><strong>document.write() 使用</strong></p>
+<ul>
+<li>字符串的输出：不改变双引号内的内容</li>
+<li>数字的输出：根据运算符进行运算的结果</li>
+<li>字符串与数字连接：字符串 + 数字</li>
+<li>数字与字符串连接: 数字 + 字符串<br>
+代码如下：</li>
+</ul>
+<pre><code>    			//字符串的输出：不改变双引号内的内容
+			document.write(&quot;1 + 2&quot;);
+			document.write(&quot;&lt;br /&gt;&quot;);
+			//数字的输出：根据运算符进行运算的结果
+			document.write(1 + 2);
+			document.write(&quot;&lt;br /&gt;&quot;);
+			//字符串与数字连接：字符串 + 数字
+			document.write(&quot;1 + 2 = &quot;+ 1 + 2);
+			document.write(&quot;&lt;br /&gt;&quot;);
+			//数字与字符串连接: 数字 + 字符串
+			document.write(1 + 2 + &quot;1 + 2 = &quot;);
+			document.write(&quot;&lt;br /&gt;&quot;);
+</code></pre>
+<p>效果如下：<br>
+<img src="https://mxzw.github.io//post-images/1590811049703.PNG" alt="" loading="lazy"><br>
+总结： 数字 + 数字 是加法运算；数字+字符串是字符的粘连</p>
+<h3 id="基本运算符"><strong>基本运算符</strong></h3>
+<p>和C语言相同，<strong>+、-、*、/、%、++、--</strong>，对应相加、相减、相乘、相除、求余、自加1、自减1，但需要注意的是由于JavaScript是弱数据类型，因此 10 / 3 = 3.3333，会自动改变数值类型，和C的强类型数据不一样，两个整数相除，结果仍为整数，小数部分直接舍去。而对于比较运算符，JavaScript显示的是布尔类型的值，即true和false。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[算法设计——动态规划（一）]]></title>
         <id>https://mxzw.github.io/post/suan-fa-she-ji-dong-tai-gui-hua-yi/</id>
