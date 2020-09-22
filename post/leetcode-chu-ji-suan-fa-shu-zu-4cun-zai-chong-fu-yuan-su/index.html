@@ -7,7 +7,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="你只管努力，剩下的交给未来">
 <meta name="theme-color" content="#000">
-<title>LeetCode-初级算法-数组-1：删除排序数组的重复项 | zw</title>
+<title>LeetCode-初级算法-数组-4：存在重复元素 | zw</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1600769892399">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
@@ -27,7 +27,7 @@
 
 
 
-    <meta name="description" content="LeetCode-初级算法-数组-1：删除排序数组的重复项" />
+    <meta name="description" content="LeetCode-初级算法-数组-4：存在重复元素" />
     <meta name="keywords" content="LeetCode" />
   </head>
   <body>
@@ -218,13 +218,13 @@
               <div class="toc-box right-motion">
   <div class="toc-wrapper auto-number auto" id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9">删除排序数组中的重复项</a>
+<li><a href="#%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0"><strong>存在重复元素</strong></a>
 <ul>
-<li><a href="#%E7%A4%BA%E4%BE%8B1"><strong>示例1：</strong></a></li>
-<li><a href="#%E7%A4%BA%E4%BE%8B2"><strong>示例2：</strong></a></li>
-<li><a href="#%E8%AF%B4%E6%98%8E"><strong>说明：</strong></a>
+<li><a href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0">题目描述</a>
 <ul>
-<li><a href="#%E4%B8%8B%E9%9D%A2%E6%98%AF%E4%BB%A3%E7%A0%81">下面是代码</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%B8%80">示例一</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%BA%8C">示例二</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%B8%89">示例三</a></li>
 </ul>
 </li>
 </ul>
@@ -493,8 +493,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/">
-      LeetCode-初级算法-数组-1：删除排序数组的重复项
+    <a class="post-title-link" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/">
+      LeetCode-初级算法-数组-4：存在重复元素
     </a>
   </h1>
   <div class="post-meta">
@@ -502,7 +502,7 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-09-21</span>
+      <span>2020-09-22</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -526,14 +526,14 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1050<span class="pc-show">字数</span></span>
+      <span>960<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/" data-flag-title="LeetCode-初级算法-数组-1：删除排序数组的重复项" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/" data-flag-title="LeetCode-初级算法-数组-4：存在重复元素" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -542,60 +542,88 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p>今天开始刷LeetCode中的面试类型题</p>
-<h1 id="删除排序数组中的重复项">删除排序数组中的重复项</h1>
-<p>给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。<br>
-不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
-<h2 id="示例1"><strong>示例1：</strong></h2>
-<pre><code>给定数组 nums = [1,1,2], 
-
-函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
-
-你不需要考虑数组中超出新长度后面的元素。
+                <h1 id="存在重复元素"><strong>存在重复元素</strong></h1>
+<h2 id="题目描述">题目描述</h2>
+<p>给定一个整数数组，判断是否存在重复元素。<br>
+如果任意一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。</p>
+<h3 id="示例一">示例一</h3>
+<pre><code>输入: [1,2,3,1]
+输出: true
 </code></pre>
-<h2 id="示例2"><strong>示例2：</strong></h2>
-<pre><code>给定 nums = [0,0,1,1,1,2,2,3,3,4],
-
-函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
-
-你不需要考虑数组中超出新长度后面的元素。
+<h3 id="示例二">示例二</h3>
+<pre><code>输入: [1,2,3,4]
+输出: false
 </code></pre>
-<h2 id="说明"><strong>说明：</strong></h2>
-<p>为什么返回数值是整数，但输出的答案是数组呢?<br>
-请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。<br>
-你可以想象内部操作如下:</p>
-<pre><code>// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
-int len = removeDuplicates(nums);
-
-// 在函数里修改输入数组对于调用者是可见的。
-// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
-for (int i = 0; i &lt; len; i++) {
-    print(nums[i]);
-}
+<h3 id="示例三">示例三</h3>
+<pre><code>输入: [1,1,1,3,3,4,3,2,4,2]
+输出: true
 </code></pre>
-<pre><code>作者：力扣 (LeetCode)
-链接：https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/x2gy9m/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-</code></pre>
-<p>我的艰难解题之路：题目要求是返回删除重复数组元素后的长度，并在运行中不能开辟新的数组空间以及要在“原地”修改删除数组的元素，还要求了空间复杂度为O(1)，由于我对空间复杂度的概念理解的并不是很透彻，因此看到这个O(1)我就认为这个题只能用一个for循环来做，二个for循环是不符合题意的(实际上是可以的)，因此我就用了好几个小时来想如何用一个for循环解这个题，当时我认为采用双指针必须要用两个for循环来表示，这是思维定势了，平常见到的算法大多都是用双循环来表示双指针的，如果我当时反映过来可以用双循环来解题，那这个题就很so easy了，不会花我好几个小时来解这个题了。由于思维的定势，我想了好久挣扎出来的代码一运行是错误的，然后我心态就崩了(本来想着不看网上答案的，但我忍不住了)，我就上网看了看官方题解是怎么写的，然后我心态血崩，这么简单的思路我想了好久，还没想出来，顿时心情就一落千丈，唉，说多了就是泪，我来说说人家官方题解的思路吧；<font color = "red">还是采用双指针，但是只用了一个for循环，，在for循环的外面定义一个指针，让他指向数组的开头a[0]，然后在for循环里面用它定义的变量做指针，开始指向数组的第二个元素a[1]，然后用if语句进行判断，如果a[i]!=a[j];则i++并且a[i]=a[j];然后直到循环结束，返回i+1。</font>看完之后，我只想说：妙啊！！，我怎么就想不到呢，想想自己花了那么多时间都没想出来的题，以为有多难呢，结果被如此轻易的做出来。。。唉，心情复杂！<br>
-补充：因为是排序数组，所以重复元素都是相邻的！</p>
-<h3 id="下面是代码">下面是代码</h3>
-<pre><code>    class Solution {
-    public int removeDuplicates(int[] nums) {
-        if(nums.length == 0) 
-            return 0;
-        int i = 0;
-		for (int j = 1; j &lt; nums.length; j++) {
-			if(nums[j]!= nums[i]) {
-				i++;
-				nums[i]=nums[j];
+<p>又是一天艰难的解题之路：在我看到这个带有重复元素的数组时，我大脑第一时间浮现双指针（懂得都懂），我首先考虑的是能否用单循环做，题目要求如果找到重复元素的话就返回true值，就说明两个指针都是要动的，所以只能采用双循环，用<strong>i</strong>指向第一个元素，用<strong>j=i+1</strong>来往后遍历数组，并对其元素进行比较，如果<strong>nums[i] == nums[j]</strong>,则返回true，否则返回false；话不多说，看代码。</p>
+<pre><code>class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        if(nums.length==0) return false;
+       for (int i = 0; i &lt; nums.length; i++) {
+			for (int j = i + 1; j &lt; nums.length; j++) {
+				if (nums[i] == nums[j]) {
+					return true;
+				}
 			}
 		}
-		return i+1;
+        return false;
     }
 }
 </code></pre>
+<p>但是在leetcode上显示的结果是：<br>
+<img src="https://mxzw.github.io//post-images/1600768702167.BMP" alt="" loading="lazy"><br>
+我哭了，我还感觉我写的很完美呢，结果给我来这一出，他说是超出时间限制，我就想会不会是双循环时间复杂度是o(n<sup>2</sup>)，太大了，导致测试大数据时，超出时间限制了呢，于是我就思考如何用单循环来完成这个题，还是同样的思想，我用while循环实现了两个指针的移动，引入一个flag来做标记，从而实现题目要求。直接看代码。</p>
+<pre><code>class Solution {
+    public boolean containsDuplicate(int[] nums) {
+		if(nums.length==0) return false;
+		int i = 0;
+		int j = i + 1;
+		boolean flag = false;
+		while (i &lt; nums.length &amp;&amp; j &lt; nums.length) {
+			if (nums[i] == nums[j]) {
+				flag=true;
+				return flag;
+			}
+			else {
+				j++;
+			}
+			if (j == nums.length - 1 &amp;&amp; flag == false) {
+				if(nums[i] == nums[j]) {
+					flag = true;
+					return flag;
+				}
+				i++;
+				j = i + 1;
+			}
+			
+		}
+		return flag;
+    }
+}
+</code></pre>
+<p>然后leetcode上显示的提交结果为：<br>
+<img src="https://mxzw.github.io//post-images/1600769075123.BMP" alt="" loading="lazy"><br>
+还是同样的超出时间限制，只不过这次还有最后执行的输入，这个数据太多了，我就只截了一半的图，其实这个时间复杂度还是n<sup>2</sup>，但是当时做的时候只想尝试用单循环做了，没考虑太多。</p>
+<p>然后我就又按捺不住了，因为我实在想不出还有什么其他的办法来解这个题，于是我就又看来官方题解。。</p>
+<p>官方题解给了3种解决的办法，第一种就是我第一次想的那种，没问题，但是人家也说了，在里面提交会超出时间限制。然后第二种就是排序，是的，排序，先将该数组排序，然后再for循环一下，将<strong>i</strong>和<strong>i+1</strong>个元素做比较，如果相等就返回true。是的，就是这么简单。然后第三种就是通过哈希表来解决，好像是用set方法或map方法来解决，我也没搞太懂，java还未学到那。</p>
+<p>这里我用的是第二种方法。代码如下：</p>
+<pre><code>class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        if(nums.length==0) return false;
+        Arrays.sort(nums);
+        for(int i = 1;i&lt;nums.length;i++){
+            if(nums[i]==nums[i-1]){
+                return true;
+            }
+        } 
+        return false;
+    }
+}
+</code></pre>
+<p>ok，成功通过，不得不说，这官方题解的思路就是好。其实我在看别人写的题解时，有个很奇特的方法，还是第二种的方法，但是在比较时，用的是异或的方法，将排好序的数组中的元素进行异或，如果异或结果为0，则证明是有重复元素的，返回true，如果没有，就返回false。真好，思想真好，我什么时候也能像这些人一样驰骋题库呢。</p>
 
               </div>
               <div class="post-footer">
@@ -606,7 +634,7 @@ for (int i = 0; i &lt; len; i++) {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/" title="LeetCode-初级算法-数组-1：删除排序数组的重复项">LeetCode-初级算法-数组-1：删除排序数组的重复项</a>
+      <a href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/" title="LeetCode-初级算法-数组-4：存在重复元素">LeetCode-初级算法-数组-4：存在重复元素</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -621,15 +649,11 @@ for (int i = 0; i &lt; len; i++) {
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="LeetCode-初级算法-数组-4：存在重复元素" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/">LeetCode-初级算法-数组-4：存在重复元素</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="LeetCode-初级算法-数组-4：存在重复元素" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="JavaScript——脚本基础" href="https://mxzw.github.io/post/javascript-jiao-ben-ji-chu/">JavaScript——脚本基础</a>
-        <a class="nav-mobile-next" title="JavaScript——脚本基础" href="https://mxzw.github.io/post/javascript-jiao-ben-ji-chu/">下一篇</a>
+        <a class="nav-pc-next" title="LeetCode-初级算法-数组-1：删除排序数组的重复项" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/">LeetCode-初级算法-数组-1：删除排序数组的重复项</a>
+        <a class="nav-mobile-next" title="LeetCode-初级算法-数组-1：删除排序数组的重复项" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

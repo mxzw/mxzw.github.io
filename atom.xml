@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mxzw.github.io/</id>
     <title>zw</title>
-    <updated>2020-09-21T07:40:09.392Z</updated>
+    <updated>2020-09-22T10:18:14.985Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mxzw.github.io/"/>
     <link rel="self" href="https://mxzw.github.io/atom.xml"/>
@@ -10,6 +10,96 @@
     <logo>https://mxzw.github.io/images/avatar.png</logo>
     <icon>https://mxzw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, zw</rights>
+    <entry>
+        <title type="html"><![CDATA[LeetCode-初级算法-数组-4：存在重复元素]]></title>
+        <id>https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/</id>
+        <link href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/">
+        </link>
+        <updated>2020-09-22T09:44:38.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="存在重复元素"><strong>存在重复元素</strong></h1>
+<h2 id="题目描述">题目描述</h2>
+<p>给定一个整数数组，判断是否存在重复元素。<br>
+如果任意一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。</p>
+<h3 id="示例一">示例一</h3>
+<pre><code>输入: [1,2,3,1]
+输出: true
+</code></pre>
+<h3 id="示例二">示例二</h3>
+<pre><code>输入: [1,2,3,4]
+输出: false
+</code></pre>
+<h3 id="示例三">示例三</h3>
+<pre><code>输入: [1,1,1,3,3,4,3,2,4,2]
+输出: true
+</code></pre>
+<p>又是一天艰难的解题之路：在我看到这个带有重复元素的数组时，我大脑第一时间浮现双指针（懂得都懂），我首先考虑的是能否用单循环做，题目要求如果找到重复元素的话就返回true值，就说明两个指针都是要动的，所以只能采用双循环，用<strong>i</strong>指向第一个元素，用<strong>j=i+1</strong>来往后遍历数组，并对其元素进行比较，如果<strong>nums[i] == nums[j]</strong>,则返回true，否则返回false；话不多说，看代码。</p>
+<pre><code>class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        if(nums.length==0) return false;
+       for (int i = 0; i &lt; nums.length; i++) {
+			for (int j = i + 1; j &lt; nums.length; j++) {
+				if (nums[i] == nums[j]) {
+					return true;
+				}
+			}
+		}
+        return false;
+    }
+}
+</code></pre>
+<p>但是在leetcode上显示的结果是：<br>
+<img src="https://mxzw.github.io//post-images/1600768702167.BMP" alt="" loading="lazy"><br>
+我哭了，我还感觉我写的很完美呢，结果给我来这一出，他说是超出时间限制，我就想会不会是双循环时间复杂度是o(n<sup>2</sup>)，太大了，导致测试大数据时，超出时间限制了呢，于是我就思考如何用单循环来完成这个题，还是同样的思想，我用while循环实现了两个指针的移动，引入一个flag来做标记，从而实现题目要求。直接看代码。</p>
+<pre><code>class Solution {
+    public boolean containsDuplicate(int[] nums) {
+		if(nums.length==0) return false;
+		int i = 0;
+		int j = i + 1;
+		boolean flag = false;
+		while (i &lt; nums.length &amp;&amp; j &lt; nums.length) {
+			if (nums[i] == nums[j]) {
+				flag=true;
+				return flag;
+			}
+			else {
+				j++;
+			}
+			if (j == nums.length - 1 &amp;&amp; flag == false) {
+				if(nums[i] == nums[j]) {
+					flag = true;
+					return flag;
+				}
+				i++;
+				j = i + 1;
+			}
+			
+		}
+		return flag;
+    }
+}
+</code></pre>
+<p>然后leetcode上显示的提交结果为：<br>
+<img src="https://mxzw.github.io//post-images/1600769075123.BMP" alt="" loading="lazy"><br>
+还是同样的超出时间限制，只不过这次还有最后执行的输入，这个数据太多了，我就只截了一半的图，其实这个时间复杂度还是n<sup>2</sup>，但是当时做的时候只想尝试用单循环做了，没考虑太多。</p>
+<p>然后我就又按捺不住了，因为我实在想不出还有什么其他的办法来解这个题，于是我就又看来官方题解。。</p>
+<p>官方题解给了3种解决的办法，第一种就是我第一次想的那种，没问题，但是人家也说了，在里面提交会超出时间限制。然后第二种就是排序，是的，排序，先将该数组排序，然后再for循环一下，将<strong>i</strong>和<strong>i+1</strong>个元素做比较，如果相等就返回true。是的，就是这么简单。然后第三种就是通过哈希表来解决，好像是用set方法或map方法来解决，我也没搞太懂，java还未学到那。</p>
+<p>这里我用的是第二种方法。代码如下：</p>
+<pre><code>class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        if(nums.length==0) return false;
+        Arrays.sort(nums);
+        for(int i = 1;i&lt;nums.length;i++){
+            if(nums[i]==nums[i-1]){
+                return true;
+            }
+        } 
+        return false;
+    }
+}
+</code></pre>
+<p>ok，成功通过，不得不说，这官方题解的思路就是好。其实我在看别人写的题解时，有个很奇特的方法，还是第二种的方法，但是在比较时，用的是异或的方法，将排好序的数组中的元素进行异或，如果异或结果为0，则证明是有重复元素的，返回true，如果没有，就返回false。真好，思想真好，我什么时候也能像这些人一样驰骋题库呢。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[LeetCode-初级算法-数组-1：删除排序数组的重复项]]></title>
         <id>https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-1shan-chu-pai-xu-shu-zu-de-chong-fu-xiang/</id>
@@ -52,7 +142,8 @@ for (int i = 0; i &lt; len; i++) {
 来源：力扣（LeetCode）
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 </code></pre>
-<p>我的艰难解题之路：题目要求是返回删除重复数组元素后的长度，并在运行中不能开辟新的数组空间以及要在“原地”修改删除数组的元素，还要求了空间复杂度为O(1)，由于我对空间复杂度的概念理解的并不是很透彻，因此看到这个O(1)我就认为这个题只能用一个for循环来做，二个for循环是不符合题意的(实际上是可以的)，因此我就用了好几个小时来想如何用一个for循环解这个题，当时我认为采用双指针必须要用两个for循环来表示，这是思维定势了，平常见到的算法大多都是用双循环来表示双指针的，如果我当时反映过来可以用双循环来解题，那这个题就很so easy了，不会花我好几个小时来解这个题了。由于思维的定势，我想了好久挣扎出来的代码一运行是错误的，然后我心态就崩了(本来想着不看网上答案的，但我忍不住了)，我就上网看了看官方题解是怎么写的，然后我心态血崩，这么简单的思路我想了好久，还没想出来，顿时心情就一落千丈，唉，说多了就是泪，我来说说人家官方题解的思路吧；<font color = "red">还是采用双指针，但是只用了一个for循环，，在for循环的外面定义一个指针，让他指向数组的开头a[0]，然后在for循环里面用它定义的变量做指针，开始指向数组的第二个元素a[1]，然后用if语句进行判断，如果a[i]!=a[j];则i++并且a[i]=a[j];然后直到循环结束，返回i+1。</font>看完之后，我只想说：妙啊！！，我怎么就想不到呢，想想自己花了那么多时间都没想出来的题，以为有多难呢，结果被如此轻易的做出来。。。唉，心情复杂！</p>
+<p>我的艰难解题之路：题目要求是返回删除重复数组元素后的长度，并在运行中不能开辟新的数组空间以及要在“原地”修改删除数组的元素，还要求了空间复杂度为O(1)，由于我对空间复杂度的概念理解的并不是很透彻，因此看到这个O(1)我就认为这个题只能用一个for循环来做，二个for循环是不符合题意的(实际上是可以的)，因此我就用了好几个小时来想如何用一个for循环解这个题，当时我认为采用双指针必须要用两个for循环来表示，这是思维定势了，平常见到的算法大多都是用双循环来表示双指针的，如果我当时反映过来可以用双循环来解题，那这个题就很so easy了，不会花我好几个小时来解这个题了。由于思维的定势，我想了好久挣扎出来的代码一运行是错误的，然后我心态就崩了(本来想着不看网上答案的，但我忍不住了)，我就上网看了看官方题解是怎么写的，然后我心态血崩，这么简单的思路我想了好久，还没想出来，顿时心情就一落千丈，唉，说多了就是泪，我来说说人家官方题解的思路吧；<font color = "red">还是采用双指针，但是只用了一个for循环，，在for循环的外面定义一个指针，让他指向数组的开头a[0]，然后在for循环里面用它定义的变量做指针，开始指向数组的第二个元素a[1]，然后用if语句进行判断，如果a[i]!=a[j];则i++并且a[i]=a[j];然后直到循环结束，返回i+1。</font>看完之后，我只想说：妙啊！！，我怎么就想不到呢，想想自己花了那么多时间都没想出来的题，以为有多难呢，结果被如此轻易的做出来。。。唉，心情复杂！<br>
+补充：因为是排序数组，所以重复元素都是相邻的！</p>
 <h3 id="下面是代码">下面是代码</h3>
 <pre><code>    class Solution {
     public int removeDuplicates(int[] nums) {
