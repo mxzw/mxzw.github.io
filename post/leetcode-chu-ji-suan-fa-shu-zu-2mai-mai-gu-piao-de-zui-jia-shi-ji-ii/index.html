@@ -7,7 +7,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="你只管努力，剩下的交给未来">
 <meta name="theme-color" content="#000">
-<title>HTML学习日记（二）——列表、图片插入、超链接 | zw</title>
+<title>LeetCode-初级算法-数组-2：买卖股票的最佳时机II | zw</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1600868546308">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
@@ -27,8 +27,8 @@
 
 
 
-    <meta name="description" content="HTML学习日记（二）——列表、图片插入、超链接" />
-    <meta name="keywords" content="HTML" />
+    <meta name="description" content="LeetCode-初级算法-数组-2：买卖股票的最佳时机II" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -218,9 +218,18 @@
               <div class="toc-box right-motion">
   <div class="toc-wrapper auto-number auto" id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E4%B8%80-%E5%88%97%E8%A1%A8">一、列表</a></li>
-<li><a href="#%E4%BA%8C-%E5%9B%BE%E7%89%87%E7%9A%84%E6%8F%92%E5%85%A5">二、图片的插入</a></li>
-<li><a href="#%E4%B8%89-%E8%B6%85%E9%93%BE%E6%8E%A5">三、超链接</a></li>
+<li><a href="#%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAii">买卖股票的最佳时机II</a>
+<ul>
+<li><a href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0">题目描述</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%B8%80">示例一</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%BA%8C">示例二</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%B8%89">示例三</a></li>
+<li><a href="#%E6%8F%90%E7%A4%BA">提示</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
   </div>
@@ -485,8 +494,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-er-lie-biao-tu-pian-cha-ru-chao-lian-jie/">
-      HTML学习日记（二）——列表、图片插入、超链接
+    <a class="post-title-link" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-2mai-mai-gu-piao-de-zui-jia-shi-ji-ii/">
+      LeetCode-初级算法-数组-2：买卖股票的最佳时机II
     </a>
   </h1>
   <div class="post-meta">
@@ -494,38 +503,25 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-04-15</span>
+      <span>2020-09-23</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://mxzw.github.io/tag/IW5rbylne/">
-              <span>HTML</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>4分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>518<span class="pc-show">字数</span></span>
+      <span>985<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/html-xue-xi-ri-ji-er-lie-biao-tu-pian-cha-ru-chao-lian-jie/" data-flag-title="HTML学习日记（二）——列表、图片插入、超链接" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/leetcode-chu-ji-suan-fa-shu-zu-2mai-mai-gu-piao-de-zui-jia-shi-ji-ii/" data-flag-title="LeetCode-初级算法-数组-2：买卖股票的最佳时机II" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -534,71 +530,54 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <h1 id="一-列表">一、列表</h1>
-<ol>
-<li><strong>有序列表</strong><br>
-在HTML中，表示有序列表的标签是＜ol＞＜/ol＞（ordered list），而表示列表项的标签是＜li＞＜/li＞（list）。常用HTML属性为type，可赋值的类型有：1(阿拉伯数字)、A(大写字母)、a(小写字母)、Ⅰ(大写罗马数字)、i(小写罗马数字)。 <table>
-         <tr>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95.BMP" /></td>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA.BMP" /></td>
-         </tr>
- </table>
-</li>
-<li><strong>无序列表</strong><br>
-表示无序列表的HTML标签是＜ul＞＜/ul＞（unordered list），表示列表项的HTML标签依旧是＜li＞＜/li＞（list）。常用的HTML属性为type，可赋值类型有:circle(空圆)、square(正方形)、disc(实圆)。 <table>
-         <tr>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95.BMP" /></td>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA.BMP" /></td>
-         </tr>
- </table>
-</li>
-<li><strong>无序列表和有序列表的嵌套</strong><br>
-两种列表的嵌套实际上就是在要嵌套的列表的列表项中，将里面的内容替换为另一种列表而已，类似于换元法。 <table>
-         <tr>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97%E8%AF%AD%E6%B3%95.BMP" /></td>
-                 <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97%E5%B1%95%E7%A4%BA.BMP" /></td>
-         </tr>
- </table>
-</li>
-</ol>
-<h1 id="二-图片的插入">二、图片的插入</h1>
-<p>＜img /＞标签表示向网页中插入图片，需要注意的是从技术上来说，＜img /＞标签并不会在网页中插入图像，而是从网页上链接图像，＜ing /＞标签创建的是被引用图像的占位空间。<br>
-＜img /＞标签有两个必须的HTML属性：src属性和alt属性。</p>
+                <h1 id="买卖股票的最佳时机ii">买卖股票的最佳时机II</h1>
+<h2 id="题目描述">题目描述</h2>
+<p>给定一个整数数组，判断是否存在重复元素。<br>
+如果任意一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。</p>
+<h3 id="示例一">示例一</h3>
+<pre><code>输入: [7,1,5,3,6,4]
+输出: 7
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
+     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。
+</code></pre>
+<h3 id="示例二">示例二</h3>
+<pre><code>输入: [1,2,3,4,5]
+输出: 4
+解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
+     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。
+     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。
+</code></pre>
+<h3 id="示例三">示例三</h3>
+<pre><code>输入: [7,6,4,3,1]
+输出: 0
+解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
+</code></pre>
+<h3 id="提示">提示</h3>
 <ul>
-<li>src属性：用来规定显示图像的链接（或是图片的路径），通常为src=“xxx”，xxx为图片所在的链接（路径）。</li>
-<li>alt属性：用来规定图像的替代文本，简单来说就是图片加载异常时的提示语，通常为alt=“xxx”，xxx为所要提示的内容。</li>
+<li>1 &lt;= prices.length &lt;= 3 * 10 ^ 4</li>
+<li>0 &lt;= prices[i] &lt;= 10 ^ 4</li>
 </ul>
-<p>＜img /＞标签除了以上两个必选打的属性外，其他常用的可选的属性：</p>
-<ul>
-<li>
-<p>align：规定如何根据周围文本来跑排列图像。</p>
-</li>
-<li>
-<p>height：定义图像的高度。</p>
-</li>
-<li>
-<p>width：设置图像的宽度。</p>
-</li>
-<li>
-<p>title：设置图片的标题。</p>
-<table>
-        <tr>
-                <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E8%AF%AD%E6%B3%95.BMP" /></td>
-                <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E5%B1%95%E7%A4%BA.BMP" /></td>
-        </tr>
-</table>
-</li>
-</ul>
-<h1 id="三-超链接">三、超链接</h1>
-<p>用＜a＞标签来表示超链接。（anchor）<br>
-＜a＞标签中最重要的属性示href属性，它和插入图片标签＜img /＞中的src属性一样，它指示链接的目标网址。常用的HTML属性为：target，可赋值的类型有：_self（在本身页面跳转）、_blank（在新页面跳转）。</p>
-  <table>
-            <tr>
-                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95.BMP" /></td>
-                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E5%B1%95%E7%A4%BA.BMP" /></td>
-                    <td><img src="https://raw.githubusercontent.com/mxzw/Gridea_photos/master/HTML%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/%E8%B6%85%E9%93%BE%E6%8E%A5%E5%B1%95%E7%A4%BA2.BMP" /></td>
-            </tr>
-    </table>
+<pre><code>作者：力扣 (LeetCode)
+链接：https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/x2zsx1/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。    
+</code></pre>
+<p>这次是不算艰难的解题之旅：其实在刚看到这个题的时候，我就被蒙蔽了，一眼扫过去感觉。。。。很难，没有太好的思路，一开始我以为他像求最短距离的问题一样，即求(i,j)=max((i,k)+(k+1,j),(i,j))，其实这些想也能说的通，就想贪心算法一样，找出最佳的那一条路，然后正当我准备将这个想法实例化的时候，我突然发现，哎，这个数组是不能修改的，也不能往前遍历，那么只要向后遍历就行，只要第<strong>i</strong>个数<strong>小于</strong>第<strong>i+1</strong>个数，那么就求他们元素之间的差值，找个中间变量存起来，然后继续相后遍历，所得到的差值之和就是要求的最大利润，想到这里，我觉得是可行的，就写了提交上去，结果，提交成功。哇，真好，这就是提交成功的感觉吗，真好，真不错！！<br>
+下面是我写的代码：</p>
+<pre><code>class Solution {
+    public int maxProfit(int[] prices) {
+       int sum = 0;
+        for(int i = 0;i&lt;prices.length-1;i++){
+            if(prices[i]&lt;=prices[i+1]){
+                sum += prices[i+1]-prices[i];
+            }
+        }
+        return sum;
+    }
+}
+</code></pre>
+<p>其实我写的还是有一些缺陷的，应该把<strong>i</strong>和<strong>i+1</strong>换成<strong>i-1</strong>和<strong>i</strong>的，这些就更好一些，当然我这样写也可以，我让最后循环退出的条件是<strong>prices.length-1</strong>，这样写也可以，但感觉是不太好的。<br>
+然后我就去看了一下，官方题解的做法，官方题解提供了三种方法，第一种是暴力法，就是直接计算所有可能交易组合相对应的利润，然后找出最大值，这个理解是挺好理解的，但是这具体写的话，还真有点难度，然后第二种方法就很奇特了，用了峰谷法，好像就是通过while循环通过**prices[i] &gt;= prices[i + 1]<strong>和</strong>prices[i] &lt;= prices[i + 1]**找到对应的峰点和谷点，然后最大的利润就是每一次找出波峰和波谷的差值之和。这个方法就很独特，很好；而第三种方法就是我这种方法了，很是舒适，我终于能和官方题解的思路一样（虽说是这个题简单把，但毕竟是第一次，还是很开心的），真好。</p>
 
               </div>
               <div class="post-footer">
@@ -609,7 +588,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://mxzw.github.io/post/html-xue-xi-ri-ji-er-lie-biao-tu-pian-cha-ru-chao-lian-jie/" title="HTML学习日记（二）——列表、图片插入、超链接">HTML学习日记（二）——列表、图片插入、超链接</a>
+      <a href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-2mai-mai-gu-piao-de-zui-jia-shi-ji-ii/" title="LeetCode-初级算法-数组-2：买卖股票的最佳时机II">LeetCode-初级算法-数组-2：买卖股票的最佳时机II</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -618,21 +597,15 @@ window.addEventListener('load', function() {
   </ul>
   <div class="tags">
     
-      <a href="https://mxzw.github.io/tag/IW5rbylne/"># HTML</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="HTML学习日记（三）——表格、表单" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-san-biao-ge-biao-dan/">HTML学习日记（三）——表格、表单</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="HTML学习日记（三）——表格、表单" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-san-biao-ge-biao-dan/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="HTML学习日记（一）——文字的基本格式" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-yi-wen-zi-de-ji-ben-ge-shi/">HTML学习日记（一）——文字的基本格式</a>
-        <a class="nav-mobile-next" title="HTML学习日记（一）——文字的基本格式" href="https://mxzw.github.io/post/html-xue-xi-ri-ji-yi-wen-zi-de-ji-ben-ge-shi/">下一篇</a>
+        <a class="nav-pc-next" title="LeetCode-初级算法-数组-4：存在重复元素" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/">LeetCode-初级算法-数组-4：存在重复元素</a>
+        <a class="nav-mobile-next" title="LeetCode-初级算法-数组-4：存在重复元素" href="https://mxzw.github.io/post/leetcode-chu-ji-suan-fa-shu-zu-4cun-zai-chong-fu-yuan-su/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
